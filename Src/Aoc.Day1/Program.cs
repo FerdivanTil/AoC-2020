@@ -35,20 +35,20 @@ namespace Aoc.Day1
 
         private static int Test1(List<int> input)
         {
-            input = input.OrderBy(i => i).ToList();
+            var dataset = input.OrderBy(i => i).ToList();
             Tuple<int, int> foundNumber = null;
 
             // Lets go
             var i = 0;
-            var last = input.Count() - 1;
+            var last = dataset.Count() - 1;
             var first = 0;
             while (true)
             {
                 i++;
-                var total = input[first] + input[last];
+                var total = dataset[first] + dataset[last];
                 if (total == 2020)
                 {
-                    foundNumber = new Tuple<int, int>(input[first], input[last]);
+                    foundNumber = new Tuple<int, int>(dataset[first], dataset[last]);
                     break;
                 }
                 if (total > 2020)
@@ -67,20 +67,20 @@ namespace Aoc.Day1
         private static int Test2(List<int> input)
         {
             Tuple<int, int, int> foundNumber = null;
-            input = input.OrderBy(i => i).ToList();
+            var dataset = input.OrderBy(i => i).ToList();
             var i = 0;
             var round = 0;
-            foreach(var item in input)
+            foreach(var item in dataset)
             {
-                var last = input.Count() -1;
+                var last = dataset.Count() -1;
                 var first = round + 1;
                 while(true)
                 {
                     i++;
-                    var total = item + input[first] + input[last];
+                    var total = item + dataset[first] + dataset[last];
                     if (total == 2020)
                     {
-                        foundNumber = new Tuple<int, int, int>(item, input[first], input[last]);
+                        foundNumber = new Tuple<int, int, int>(item, dataset[first], dataset[last]);
                         break;
                     }
                     if(total > 2020)
