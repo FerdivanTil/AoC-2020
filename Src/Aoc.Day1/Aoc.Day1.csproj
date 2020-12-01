@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Aoc.BusinessLogic\Aoc.BusinessLogic\Aoc.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Aoc.BusinessLogic\Aoc.BusinessLogic\Aoc.BusinessLogic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
