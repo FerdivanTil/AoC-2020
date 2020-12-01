@@ -35,9 +35,10 @@ namespace Aoc.Day1
 
         private static int Test1(List<int> input)
         {
+            input = input.OrderBy(i => i).ToList();
             // Start ordering the two lists
-            var lower = new Queue<int>(input.Where(i => i <= 2020 / 2).OrderBy(i => i).ToArray());
-            var upper = new Stack<int>(input.Where(i => i >= 2020 / 2).OrderBy(i => i).ToArray());
+            var lower = new Queue<int>(input.Where(i => i <= 1010).ToArray());
+            var upper = new Stack<int>(input.Where(i => i >= 1010).ToArray());
             Tuple<int, int> foundNumber = null;
             var first = lower.Dequeue();
             var last = upper.Pop();
