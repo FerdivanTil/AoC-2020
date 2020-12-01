@@ -21,17 +21,30 @@ namespace Aoc.Day1
             input = text.Split(Environment.NewLine).Select(i => int.Parse(i)).ToList();
             var stopwatch = new Stopwatch();
             stopwatch.Start();
+            var i = Test1(input);
 
+            stopwatch.Stop();
+            Console.WriteLine($"Test 1: It took: {stopwatch.ElapsedMilliseconds}ms and {i} iterations");
+
+            stopwatch.Restart();
+            i = Test2(input);
+
+            stopwatch.Stop();
+            Console.WriteLine($"Test 2: It took: {stopwatch.ElapsedMilliseconds}ms and {i} iterations");
+        }
+
+        private static int Test1(List<int> input)
+        {
             // Start ordering the two lists
-            var lower =  new Queue<int>(input.Where(i => i <= 2020 / 2).OrderBy(i => i).ToArray());
+            var lower = new Queue<int>(input.Where(i => i <= 2020 / 2).OrderBy(i => i).ToArray());
             var upper = new Stack<int>(input.Where(i => i >= 2020 / 2).OrderBy(i => i).ToArray());
-            Tuple<int,int> foundNumber = null;
+            Tuple<int, int> foundNumber = null;
             var first = lower.Dequeue();
             var last = upper.Pop();
 
             // Lets go
             var i = 0;
-            while(true)
+            while (true)
             {
                 i++;
                 var total = first + last;
@@ -47,12 +60,55 @@ namespace Aoc.Day1
                 }
                 first = lower.Dequeue();
             }
-            
-            stopwatch.Stop();
-            Console.WriteLine($"It took: {stopwatch.ElapsedMilliseconds} and {i} iterations");
+
             Console.WriteLine($"{foundNumber.Item1}-{foundNumber.Item2}");
-            Console.WriteLine($"Result = {foundNumber.Item1*foundNumber.Item2}");
-            Console.ReadKey();
+            Console.WriteLine($"Result = {foundNumber.Item1 * foundNumber.Item2}");
+            return i;
+        }
+
+        private static int Test2(List<int> input)
+        {
+            Tuple<int, int, int> foundNumber = null;
+            input = input.OrderBy(i => i).ToList();
+            var i = 0;
+            var round = 0;
+            foreach(var item in input)
+            {
+                var last = input.Count() -1;
+                var first = round + 1;
+                while(true)
+                {
+                    i++;
+                    var total = item + input[first] + input[last];
+                    if (total == 2020)
+                    {
+                        foundNumber = new Tuple<int, int, int>(item, input[first], input[last]);
+                        break;
+                    }
+                    if(total > 2020)
+                    {
+                        last--;
+                    }
+                    if (total < 2020)
+                    {
+                        first++;
+                    }
+                    if(last == first)
+                    {
+                        break;
+                    }
+                }
+                if(foundNumber != null)
+                {
+                    break;
+                }
+                round++;
+            }
+
+            Console.WriteLine($"{foundNumber.Item1}-{foundNumber.Item2}-{foundNumber.Item3}");
+            Console.WriteLine($"Result = {foundNumber.Item1 * foundNumber.Item2 * foundNumber.Item3}");
+
+            return i;
         }
     }
 }
