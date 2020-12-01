@@ -36,30 +36,27 @@ namespace Aoc.Day1
         private static int Test1(List<int> input)
         {
             input = input.OrderBy(i => i).ToList();
-            // Start ordering the two lists
-            var lower = new Queue<int>(input.Where(i => i <= 1010).ToArray());
-            var upper = new Stack<int>(input.Where(i => i >= 1010).ToArray());
             Tuple<int, int> foundNumber = null;
-            var first = lower.Dequeue();
-            var last = upper.Pop();
 
             // Lets go
             var i = 0;
+            var last = input.Count() - 1;
+            var first = 0;
             while (true)
             {
                 i++;
-                var total = first + last;
+                var total = input[first] + input[last];
                 if (total == 2020)
                 {
-                    foundNumber = new Tuple<int, int>(first, last);
+                    foundNumber = new Tuple<int, int>(input[first], input[last]);
                     break;
                 }
                 if (total > 2020)
                 {
-                    last = upper.Pop();
+                    last--;
                     continue;
                 }
-                first = lower.Dequeue();
+                first++;
             }
 
             Console.WriteLine($"{foundNumber.Item1}-{foundNumber.Item2}");
