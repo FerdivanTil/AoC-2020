@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day1", "Src\Aoc.Day1\Aoc.Day1.csproj", "{7195410B-2C19-4BB1-A177-F15B91A48300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.Day1", "Src\Aoc.Day1\Aoc.Day1.csproj", "{7195410B-2C19-4BB1-A177-F15B91A48300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.BusinessLogic", "Src\Aoc.BusinessLogic\Aoc.BusinessLogic\Aoc.BusinessLogic.csproj", "{ED10E828-D1A4-441A-A035-AE2AC405F705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.BusinessLogic", "Src\Aoc.BusinessLogic\Aoc.BusinessLogic\Aoc.BusinessLogic.csproj", "{ED10E828-D1A4-441A-A035-AE2AC405F705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day2", "Src\Aoc.Day2\Aoc.Day2.csproj", "{149F78AA-6086-4253-A0E2-5D13696732F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ED10E828-D1A4-441A-A035-AE2AC405F705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED10E828-D1A4-441A-A035-AE2AC405F705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED10E828-D1A4-441A-A035-AE2AC405F705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149F78AA-6086-4253-A0E2-5D13696732F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149F78AA-6086-4253-A0E2-5D13696732F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149F78AA-6086-4253-A0E2-5D13696732F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149F78AA-6086-4253-A0E2-5D13696732F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,11 +17,12 @@ namespace Aoc.Day1
                                         675,
                                         1456};
             // Real live data
-            var text = System.IO.File.ReadAllText(@"input.txt");
+            var text = System.IO.File.ReadAllText(@"input-day-1.txt");
             input = text.Split(Environment.NewLine).Select(i => int.Parse(i)).ToList();
+            var i = 0;
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            var i = Test1(input);
+            i = Test1(input);
 
             stopwatch.Stop();
             Console.WriteLine($"Test 1: It took: {stopwatch.ElapsedMilliseconds}ms and {i} iterations");
