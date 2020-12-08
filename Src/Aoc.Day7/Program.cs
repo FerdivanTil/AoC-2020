@@ -116,7 +116,6 @@ namespace Aoc.Day7
         {
             Amount = amount;
             Bag = bag;
-            //Parent.Add(parent);
         }
         public int Amount { get; set; }
         public Bag Bag { get; set; }

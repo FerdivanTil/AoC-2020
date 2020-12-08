@@ -9,15 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.BusinessLogic", "Src\Ao
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.Day2", "Src\Aoc.Day2\Aoc.Day2.csproj", "{149F78AA-6086-4253-A0E2-5D13696732F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day3", "Src\Aoc.Day3\Aoc.Day3.csproj", "{F36352BE-D647-48D8-9E9A-55F41AEC75A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.Day3", "Src\Aoc.Day3\Aoc.Day3.csproj", "{F36352BE-D647-48D8-9E9A-55F41AEC75A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day4", "Src\Aoc.Day4\Aoc.Day4.csproj", "{5020034D-5024-4BC6-BB26-B1595E98017F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.Day4", "Src\Aoc.Day4\Aoc.Day4.csproj", "{5020034D-5024-4BC6-BB26-B1595E98017F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day5", "Src\Aoc.Day5\Aoc.Day5.csproj", "{AFDBA5F0-A7B2-4847-9314-FC5F2B540FFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.Day5", "Src\Aoc.Day5\Aoc.Day5.csproj", "{AFDBA5F0-A7B2-4847-9314-FC5F2B540FFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day6", "Src\Aoc.Day6\Aoc.Day6.csproj", "{74CC3A7B-BB6B-480F-BC98-7174B80BF405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.Day6", "Src\Aoc.Day6\Aoc.Day6.csproj", "{74CC3A7B-BB6B-480F-BC98-7174B80BF405}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day7", "Src\Aoc.Day7\Aoc.Day7.csproj", "{761AD2A8-CBE3-4291-B4AD-093879E29F37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aoc.Day7", "Src\Aoc.Day7\Aoc.Day7.csproj", "{761AD2A8-CBE3-4291-B4AD-093879E29F37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aoc.Day8", "Aoc.Day8\Aoc.Day8.csproj", "{1651D752-B643-46F1-83AC-93698E7D1EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{761AD2A8-CBE3-4291-B4AD-093879E29F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{761AD2A8-CBE3-4291-B4AD-093879E29F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{761AD2A8-CBE3-4291-B4AD-093879E29F37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1651D752-B643-46F1-83AC-93698E7D1EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1651D752-B643-46F1-83AC-93698E7D1EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1651D752-B643-46F1-83AC-93698E7D1EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1651D752-B643-46F1-83AC-93698E7D1EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
